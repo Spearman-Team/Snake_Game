@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SNAKE GAME</title>
+</head>
+<body>
+	<div class="menu">
+		<div class="intro-cont">
+			<p>
+				<span>SNAKE</span>
+				<span>GAME. </span> 
+				<span>V.1 </span>
+			</p>	
+		</div>
+		<div class="btn-cont">
+			<button class="start-btn" onclick="window.location.href = 'index.html'"><b>START</b></button>
+		</div>
+	</div>
+</body>
+<style>
+	body{
+		background-image: url(img/snakeback.jpg);
+		margin: 0;
+		padding: 0;
+		background-size:cover;
+		overflow: hidden;
+
+	}	
+	.menu{
+		opacity: 1;
+	}
+
+	
+	.intro-cont{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		top: 50px;
+		transform: skew(-7deg);
+		animation: move 2s infinite 0s;
+	}
+
+		@keyframes move{
+		0%{
+			top: 50px;
+		}
+		50%{
+			top: 90px;
+		}
+		100%{
+			top: 50px;
+		}
+	}
+
+	.intro-cont p{
+		font-size: 3.5rem;
+		font-family: comic sans ms;
+		color: #fff;
+		text-shadow: 1px 1px 0 #ccc,
+					 2px 2px 0 #ccc,
+					 3px 3px 0 #ccc,
+					 4px 4px 0 #ccc,
+					 5px 5px 0 #ccc,
+					 10px 10px 0 #000;
+	}
+	.intro-cont p > span:nth-of-type(1){
+		color: red;
+		text-shadow: 1px 1px 0 darkred,
+					 2px 2px 0 darkred,
+					 3px 3px 0 darkred,
+					 4px 4px 0 darkred,
+					 5px 5px 0 darkred,
+					 10px 10px 0 #000;
+	}
+	.intro-cont p > span:nth-of-type(2){
+		color: green;
+		text-shadow: 1px 1px 0 darkgreen,
+					 2px 2px 0 darkgreen,
+					 3px 3px 0 darkgreen,
+					 4px 4px 0 darkgreen,
+					 5px 5px 0 darkgreen,
+					 10px 10px 0 #000;
+	}
+	.btn-cont{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+	}
+
+		.start-btn{
+            
+			padding: 1em 3em;
+			background: linear-gradient(darkred, red);
+			margin-top: 200px;
+			color: #fff;
+			border: 0;
+			border-radius: 2em;
+			font-family: comic sans ms;
+			box-shadow: 1px 1px 0 darkred,
+					 2px 2px 0 darkred,
+					 3px 3px 0 darkred,
+					 4px 4px 0 darkred,
+					 5px 5px 0 darkred,
+					 10px 10px 0 #000;
+			cursor: pointer;
+			transition-duration: .3s;
+		}
+		.start-btn:hover{
+            color: #2cff02;
+			padding: 1em 4em;
+			/*background: linear-gradient(red, darkred);*/
+		}
+</style>
+</html>
